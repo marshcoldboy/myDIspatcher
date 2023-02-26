@@ -161,9 +161,9 @@ export const routes: RouteRecordRaw[] = [
     ]
   },
   {
-    path: '/https://github.com/1esse/vue-clownfish-admin',
+    path: '/https://github.com/marshcoldboy/myDIspatcher',
     component: undefined,
-    redirect: 'https://github.com/1esse/vue-clownfish-admin',
+    redirect: 'https://github.com/marshcoldboy/myDIspatcher',
     meta: { title: 'github', icon: GithubOutlined, external: true }
   }
 ]
