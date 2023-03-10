@@ -30,9 +30,6 @@ function initChart() {
     chart.value = echarts.init(chartRef.value)
     const option: echarts.EChartsOption = {
         backgroundColor: '#fff',
-        title: {
-            text: '堆叠折线图'
-        },
         tooltip: {
             trigger: 'axis'
         },
@@ -101,4 +98,3 @@ function resizeChart() {
 <template>
     <div ref="chartRef" v-bind="attrs" />
 </template>
-    

@@ -32,9 +32,6 @@ watch(() => sidebarRelated?.collapsed, () => {
 function initChart() {
   chart.value = echarts.init(chartRef.value)
   const option: echarts.EChartsOption = {
-    title: {
-      text: '系统概览俯视图'
-    },
     tooltip: {},
     animationDurationUpdate: 1500,
     animationEasingUpdate: 'quinticInOut',
@@ -48,7 +45,7 @@ function initChart() {
           show: true
         },
         edgeSymbol: ['circle', 'arrow'],
-        edgeSymbolSize: [4, 10],
+        edgeSymbolSize: [3, 5],
         edgeLabel: {
           fontSize: 20
         },
@@ -56,7 +53,11 @@ function initChart() {
           {
             name: 'Node 1',
             x: 300,
-            y: 300
+            y: 300,
+            value: '100w',
+            itemStyle: {
+              color: 'red'
+            }
           },
           {
             name: 'Node 2',
@@ -76,7 +77,8 @@ function initChart() {
           {
             name: 'Node 5',
             x: 550,
-            y: 500
+            y: 500,
+            value: '240w'
           },
           {
             name: 'Node 6',
@@ -104,7 +106,7 @@ function initChart() {
               show: true
             },
             lineStyle: {
-              width: 5,
+              width: 2,
               curveness: 0.2
             }
           },

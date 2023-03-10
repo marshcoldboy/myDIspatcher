@@ -86,53 +86,11 @@ export const routes: RouteRecordRaw[] = [
   //   ]
   // },
   {
-    path: '/table',
-    name: 'Table',
-    component: Layout,
-    redirect: { name: 'tableList' },
-    meta: { title: '表格管理', icon: TableOutlined },
-    children: [
-      {
-        path: 'index',
-        name: 'tableList',
-        component: () => import('@/views/table/tableList.vue'),
-        meta: { title: '表格列表', icon: TableOutlined, keepAlive: true, searchKeywords: ['biaogeliebiao', 'bglb'] }
-      },
-      {
-        path: 'export',
-        name: 'tableExport',
-        component: () => import('@/views/table/tableExport.vue'),
-        meta: { title: '表格导出', icon: ExportOutlined, keepAlive: true, searchKeywords: ['biaogedaochu', 'bgdc'] }
-      }
-    ]
-  },
-  {
-    path: '/route',
-    name: 'Route',
-    component: Layout,
-    redirect: { name: 'dynamicRoute' },
-    meta: { title: '路由管理', icon: FireOutlined },
-    children: [
-      {
-        path: 'dynamicRoute',
-        name: 'dynamicRoute',
-        component: () => import('@/views/route/dynamicRoute.vue'),
-        meta: { title: '动态路由', icon: FireOutlined, keepAlive: true, searchKeywords: ['dongtailuyou', 'dtlu'] }
-      },
-      {
-        path: 'dynamicMenu',
-        name: 'dynamicMenu',
-        component: () => import('@/views/route/dynamicMenu.vue'),
-        meta: { title: '动态菜单', icon: FireOutlined, keepAlive: true, searchKeywords: ['dongtaicaidan', 'dtcd'] }
-      }
-    ]
-  },
-  {
     path: '/chart',
     name: 'Chart',
     component: Layout,
     redirect: { name: 'dynamicRoute' },
-    meta: { title: '图表', icon: DotChartOutlined },
+    meta: { title: '详情', icon: DotChartOutlined },
     children: [
       {
         path: 'systemGraph',
@@ -160,6 +118,81 @@ export const routes: RouteRecordRaw[] = [
       },
     ]
   },
+  {
+    path: '/table',
+    name: 'Table',
+    component: Layout,
+    redirect: { name: 'tableList' },
+    meta: { title: '表格导出', icon: TableOutlined },
+    children: [
+      {
+        path: 'index',
+        name: 'tableList',
+        component: () => import('@/views/table/tableList.vue'),
+        meta: { title: '表格列表', icon: TableOutlined, keepAlive: true, searchKeywords: ['biaogeliebiao', 'bglb'] }
+      },
+      {
+        path: 'export',
+        name: 'tableExport',
+        component: () => import('@/views/table/tableExport.vue'),
+        meta: { title: '表格导出', icon: ExportOutlined, keepAlive: true, searchKeywords: ['biaogedaochu', 'bgdc'] }
+      }
+    ]
+  },
+  // {
+  //   path: '/route',
+  //   name: 'Route',
+  //   component: Layout,
+  //   redirect: { name: 'dynamicRoute' },
+  //   meta: { title: '路由管理', icon: FireOutlined },
+  //   children: [
+  //     {
+  //       path: 'dynamicRoute',
+  //       name: 'dynamicRoute',
+  //       component: () => import('@/views/route/dynamicRoute.vue'),
+  //       meta: { title: '动态路由', icon: FireOutlined, keepAlive: true, searchKeywords: ['dongtailuyou', 'dtlu'] }
+  //     },
+  //     {
+  //       path: 'dynamicMenu',
+  //       name: 'dynamicMenu',
+  //       component: () => import('@/views/route/dynamicMenu.vue'),
+  //       meta: { title: '动态菜单', icon: FireOutlined, keepAlive: true, searchKeywords: ['dongtaicaidan', 'dtcd'] }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/chart',
+  //   name: 'Chart',
+  //   component: Layout,
+  //   redirect: { name: 'dynamicRoute' },
+  //   meta: { title: '图表', icon: DotChartOutlined },
+  //   children: [
+  //     {
+  //       path: 'systemGraph',
+  //       name: 'systemGraph',
+  //       component: () => import('@/views/charts/systemGraph.vue'),
+  //       meta: { title: '系统概览', icon: BranchesOutlined, searchKeywords: ['systemGraph', 'xitong', 'bt'] }
+  //     },
+  //     {
+  //       path: 'pie',
+  //       name: 'pie',
+  //       component: () => import('@/views/charts/pie.vue'),
+  //       meta: { title: '饼图', icon: PieChartOutlined, searchKeywords: ['pie', 'bingtu', 'bt'] }
+  //     },
+  //     {
+  //       path: 'line',
+  //       name: 'line',
+  //       component: () => import('@/views/charts/line.vue'),
+  //       meta: { title: '折线图', icon: LineChartOutlined, searchKeywords: ['line', 'zhexiantu', 'zxt'] }
+  //     },
+  //     {
+  //       path: 'keyboard',
+  //       name: 'keyboard',
+  //       component: () => import('@/views/charts/keyboard.vue'),
+  //       meta: { title: '键盘', icon: BarChartOutlined, searchKeywords: ['keyboard', 'jianpan', 'jp'] }
+  //     },
+  //   ]
+  // },
   {
     path: '/https://github.com/marshcoldboy/myDIspatcher',
     component: undefined,
