@@ -32,9 +32,6 @@ watch(() => sidebarRelated?.collapsed, () => {
 function initChart() {
   chart.value = echarts.init(chartRef.value)
   const option: echarts.EChartsOption = {
-    title: {
-      text: 'World Population'
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -54,18 +51,18 @@ function initChart() {
     },
     yAxis: {
       type: 'category',
-      data: ['23', '21', '19', '17', '15', '13']
+      data: ['1', '3', '5', '7', '9', '11', '13', '15', '17', '19', '21', '23']
     },
     series: [
       {
         name: '电',
         type: 'bar',
-        data: [18203, 23489, 29034, 104970, 131744, 630230]
+        data: [18, 23, 29, 10, 13, 63, 20]
       },
       {
         name: '热',
         type: 'bar',
-        data: [19325, 23438, 31000, 121594, 134141, 681807]
+        data: [19, 23, 31, 12, 13, 68, 15]
       }
     ]
   }

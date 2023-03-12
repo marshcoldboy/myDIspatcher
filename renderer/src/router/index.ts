@@ -102,7 +102,7 @@ export const routes: RouteRecordRaw[] = [
         path: 'pie',
         name: 'pie',
         component: () => import('@/views/charts/pie.vue'),
-        meta: { title: '饼图', icon: PieChartOutlined, searchKeywords: ['pie', 'bingtu', 'bt'] }
+        meta: { title: '出力信息', icon: PieChartOutlined, searchKeywords: ['pie', 'bingtu', 'bt'] }
       },
       {
         path: 'line',
@@ -114,7 +114,7 @@ export const routes: RouteRecordRaw[] = [
         path: 'keyboard',
         name: 'keyboard',
         component: () => import('@/views/charts/keyboard.vue'),
-        meta: { title: '键盘', icon: BarChartOutlined, searchKeywords: ['keyboard', 'jianpan', 'jp'] }
+        meta: { title: '负荷', icon: BarChartOutlined, searchKeywords: ['keyboard', 'jianpan', 'jp'] }
       },
     ]
   },
@@ -123,7 +123,7 @@ export const routes: RouteRecordRaw[] = [
     name: 'Table',
     component: Layout,
     redirect: { name: 'tableList' },
-    meta: { title: '表格导出', icon: TableOutlined },
+    meta: { title: '出力概览', icon: TableOutlined },
     children: [
       {
         path: 'index',
